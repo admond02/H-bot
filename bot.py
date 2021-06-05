@@ -22,8 +22,8 @@ client = commands.Bot(command_prefix='!')
 
 @client.command()
 async def 테스트(ctx):
+    await ctx.send('적용됨')
     role = discord.utils.get(msg.guild.roles, name="humen")
     await msg.author.add_roles(role)
-    await ctx.send('적용')
 
 client.run(os.environ['token'])
