@@ -24,8 +24,7 @@ client = commands.Bot(command_prefix='!')
 async def 테스트(ctx):
     await ctx.send('역할적용')
     member = member or ctx.message.author
-    await member.add_roles(get(ctx.guild.roles, name="새 역할"))
-
+    await member.add_roles(get(ctx.guild.roles, name="human"))
 
 
 client.run(os.environ['token'])
