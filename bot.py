@@ -17,5 +17,10 @@ async def on_ready():
   
   print("봇 이름:",client.user.name,"봇 아이디:",client.user.id,"봇 버전:",discord.__version__)
 
+client = commands.Bot(command_prefix='!')
+
+@client.command()
+async def test(ctx):
+    await ctx.send('안녕하세요')
 
 client.run(os.environ['token'])
