@@ -20,7 +20,7 @@ async def on_ready():
 client = commands.Bot(command_prefix='!')
 
 @client.command()
-async def test(ctx):
+async def 테스트(ctx):
     await ctx.send('안녕하세요')
 
 client.run(os.environ['token'])
