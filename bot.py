@@ -20,10 +20,9 @@ async def on_ready():
 
 client = commands.Bot(command_prefix='!')
 
-@client.command(name="인간적용", pass_context=True)
-async def _HumanRole(ctx, member: discord.Member=None):
-    member = member or ctx.message.author
-    await member.add_roles(get(ctx.guild.roles, name="human"))
-    await ctx.channel.send(str(member)+"에게 역할이 적용되었습니다.")
+@client.command()
+async def 테스트(ctx):
+    role = discord.utils.get(msg.guild.roles, name="역할이름")
+    await msg.author.add_roles(role)
 
 client.run(os.environ['token'])
