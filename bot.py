@@ -20,13 +20,7 @@ async def on_ready():
 
 client = commands.Bot(command_prefix='!')
 
-@client.command()
-async def 테스트(ctx):
-    await ctx.send('역할적용')
-    member = member or ctx.message.author
-    await member.add_roles(get(ctx.guild.roles, name="human"))
-
-@app.command(name="인간적용", pass_context=True)
+@client.command(name="인간적용", pass_context=True)
 async def _HumanRole(ctx, member: discord.Member=None):
     member = member or ctx.message.author
     await member.add_roles(get(ctx.guild.roles, name="human"))
