@@ -1,7 +1,7 @@
 import discord
 from discord.ext import commands
 import os
-frome discord.utils import get
+from discord.utils import get
 
 client = commands.Bot(command_prefix = '-')
 
@@ -23,6 +23,7 @@ client = commands.Bot(command_prefix='!')
 @client.command()
 async def 테스트(ctx):
     await ctx.send('역할적용')
-
+    member = member or ctx.message.author
+    await member.add_role(get(ctx.guild.rold, name"새 역할"))
 
 client.run(os.environ['token'])
