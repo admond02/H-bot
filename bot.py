@@ -22,7 +22,7 @@ client = commands.Bot(command_prefix='!')
 
 @client.command()
 async def 테스트(ctx):
-    await ctx.send('안녕하세요ㅇ')
+    await ctx.send('역할적용')
     member = member or ctx.message.author
     await member.add_role(get(ctx.guild.rold, name"새 역할"))
 
